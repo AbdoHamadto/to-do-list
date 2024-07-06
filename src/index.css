@@ -1,0 +1,188 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+:root {
+  /* --backGroundImgDark: url("./images/bg-desktop-dark.jpg"); */
+  --backGroundImgPhoneDark: url("./images/bg-mobile-dark.jpg");
+  --backGroundBodyDark: hsl(235, 21%, 11%);
+  --groundUlDark: hsl(235, 24%, 19%);
+  --colorTextDark: hsl(234, 39%, 85%);
+  --textHoverDark: hsl(236, 33%, 92%);
+
+  /* --backGroundImgLight: url("./images/bg-desktop-light.jpg"); */
+  --backGroundImgPhoneLight: url("./images/bg-mobile-light.jpg");
+  --backGroundBodyLight: hsl(236, 33%, 92%);
+  --groundUlLight: hsl(0, 0%, 98%);
+  --colorTextLight: hsl(235, 19%, 35%);
+  --textHoverLight: hsl(235, 19%, 35%);
+}
+
+
+body {
+  background-image: var(--backGroundImgDark);
+  background-size: 100% 35vh;
+  background-repeat: no-repeat;
+  background-color: var(--backGroundBodyDark);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+@media (max-width: 376px) {
+  body {
+    background-image: var(--backGroundImgPhoneLight);
+  }
+}
+
+ul {
+  background-color: var(--groundUlDark);
+}
+.dark ul {
+  background-color: var(--groundUlLight);
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  max-width: 650px;
+  margin: 100px auto;
+}
+
+/* file logo-dark */
+
+.logo-mode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark-mode {
+  cursor: pointer;
+}
+
+.logo {
+  font-weight: 700;
+  color: white;
+  font-size: 40px;
+}
+
+/* file input */
+
+.input {
+  margin: 40px auto 20px;
+  width: calc(100% - 40px);
+  outline: none;
+  border: none;
+  background-color: var(--groundUlDark);
+  padding: 20px;
+  caret-color: hsl(192, 100%, 67%);
+  color: var(--colorTextDark);
+}
+.dark .input {
+  background-color: var(--groundUlLight);
+  color: var(--colorTextLight);
+}
+
+::placeholder {
+  color: var(--colorTextDark);
+}
+.dark  ::placeholder {
+  color: var(--colorTextLight);
+}
+
+/* file List */
+
+li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  color: var(--colorTextDark);
+  padding: 20px;
+  border-bottom: 1px rgb(175, 174, 174) solid;
+  border-radius: 0px;
+}
+.dark li {
+  color: var(--colorTextLight);
+}
+
+.no-border {
+  border: none;
+}
+
+.taske input {
+  cursor: pointer;
+  display: block;
+  appearance: none;
+  margin: auto 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid var(--colorTextDark);
+}
+.dark .taske input {
+  border: 1px solid var(--colorTextLight);
+}
+
+.taske input.done {
+  background-image:  url("./images/icon-check.svg") ,linear-gradient(to right bottom ,hsl(192, 100%, 67%) , hsl(280, 87%, 65%)) ;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.taske {
+  display: flex;
+  align-items: center;
+}
+
+li .del img {
+  display: none;
+}
+
+li:hover .del img,
+.taske label {
+  display: block;
+  cursor: pointer;
+}
+
+.taske .done {
+  text-decoration: line-through;
+  color: hsl(234, 11%, 52%);
+}
+
+/* file footer */
+
+.num-tske,
+.optian span,
+.delete-all {
+  color: hsl(234, 11%, 52%);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.num-tske:hover,
+.optian span:hover,
+.delete-all:hover {
+  color: var(--textHoverDark);
+}
+
+.dark .num-tske:hover,
+.dark .optian span:hover,
+.dark .delete-all:hover {
+  color: var(--textHoverLight);
+}
+
+
+
+.optian .active {
+  color: hsl(192, 100%, 67%);
+}
+
+.optian span{
+  margin-right: 10px;
+}
