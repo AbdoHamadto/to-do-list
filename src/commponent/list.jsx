@@ -1,11 +1,13 @@
+import { useState } from "react";
 import deleteTaske from "../images/icon-cross.svg"
 
 const List = ({data, stTaske, removeTaske}) => {
     
-
+    const [reload, setReload] = useState(true)
     const state = (index) => {
         data[index].stateTask = !data[index].stateTask;
         stTaske(data)
+        setReload(!reload)
     }
     
     const remove = (index) => {
