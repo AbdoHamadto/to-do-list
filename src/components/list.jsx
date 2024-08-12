@@ -16,10 +16,10 @@ const List = ({data, stTaske, removeTaske}) => {
     
     return (
         <>
-            {data.map((item) => 
+            {data.map((item, index) => 
                 <li key={item.id} >
                     <div className="taske"  >
-                        <input id={item.id} className={item.stateTask ? "done" : ""} type="checkbox" onClick={() => state(item.id)} />
+                        <input id={item.id} className={item.stateTask ? "done" : ""} type="checkbox" onClick={() => state(index)} />
                         <label htmlFor={item.id} className={item.stateTask ? "done" : ""} > {item.taske}  </label>
                     </div>
                     <div className="del" onClick={() => remove(item.id)}><img src={deleteTaske}/></div>

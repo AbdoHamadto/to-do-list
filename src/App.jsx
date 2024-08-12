@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import { createGlobalStyle } from "styled-components";
-import Logo from './commponent/logo-dark'
-import Input from './commponent/input'
-import List from './commponent/list'
-import Footer from './commponent/footer'
+import Logo from './components/logo-dark'
+import Input from './components/input'
+import List from './components/list'
+import Footer from './components/footer'
 
 function App() {
   const [newData, setNewData] = useState([])
